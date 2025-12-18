@@ -1,0 +1,8 @@
+s="python programming"
+sub="python"
+
+if sub in s:
+   print("subtracting found")
+else:
+  print("subtractingnot found")
+   
