@@ -1,0 +1,14 @@
+import random
+import string
+
+url_map = {}
+
+def shorten_url(long_url):
+    short = ''.join(random.choices(string.ascii_letters + string.digits, k=6))
+    url_map[short] = long_url
+    return short
+
+long_url = input("Enter long URL: ")
+short_url = shorten_url(long_url)
+print("Short URL:", short_url)
+print("Original URL:", url_map[short_url])
