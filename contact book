@@ -1,0 +1,25 @@
+contacts = {}
+
+while True:
+    print("\n1.Add  2.Search  3.Delete  4.View All  5.Exit")
+    choice = int(input("Choice: "))
+
+    if choice == 1:
+        name = input("Name: ")
+        phone = input("Phone: ")
+        contacts[name] = phone
+
+    elif choice == 2:
+        name = input("Search name: ")
+        print("Phone:", contacts.get(name, "Not found"))
+
+    elif choice == 3:
+        name = input("Delete name: ")
+        contacts.pop(name, None)
+
+    elif choice == 4:
+        for k, v in contacts.items():
+            print(k, "->", v)
+
+    else:
+        break
