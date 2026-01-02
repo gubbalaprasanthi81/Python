@@ -1,0 +1,8 @@
+rows = int(input("Rows: "))
+cols = int(input("Cols: "))
+
+A = [[int(input()) for _ in range(cols)] for _ in range(rows)]
+B = [[int(input()) for _ in range(cols)] for _ in range(rows)]
+
+result = [[A[i][j] + B[i][j] for j in range(cols)] for i in range(rows)]
+print("Sum:", result)
