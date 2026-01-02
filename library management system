@@ -1,0 +1,23 @@
+class Library:
+    def __init__(self):
+        self.books = {}
+
+    def add_book(self, name, copies):
+        self.books[name] = copies
+
+    def borrow_book(self, name):
+        if self.books.get(name, 0) > 0:
+            self.books[name] -= 1
+            print("Book issued")
+        else:
+            print("Not available")
+
+    def view_books(self):
+        for book, copies in self.books.items():
+            print(book, ":", copies)
+
+lib = Library()
+lib.add_book("Python", 3)
+lib.add_book("DSA", 2)
+lib.borrow_book("Python")
+lib.view_books()
