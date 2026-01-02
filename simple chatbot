@@ -1,0 +1,16 @@
+def chatbot(msg):
+    msg = msg.lower()
+    if "hello" in msg:
+        return "Hi! How can I help you?"
+    elif "time" in msg:
+        return "I cannot tell time yet 😄"
+    elif "bye" in msg:
+        return "Goodbye!"
+    else:
+        return "Sorry, I don't understand."
+
+while True:
+    user = input("You: ")
+    if user.lower() == "exit":
+        break
+    print("Bot:", chatbot(user))
