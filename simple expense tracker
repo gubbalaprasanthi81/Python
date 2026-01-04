@@ -1,0 +1,20 @@
+expenses = []
+
+while True:
+    print("\n1.Add Expense  2.View Expenses  3.Total  4.Exit")
+    ch = int(input("Choice: "))
+
+    if ch == 1:
+        item = input("Item: ")
+        amount = float(input("Amount: "))
+        expenses.append((item, amount))
+
+    elif ch == 2:
+        for e in expenses:
+            print(e[0], ":", e[1])
+
+    elif ch == 3:
+        print("Total:", sum(e[1] for e in expenses))
+
+    else:
+        break
