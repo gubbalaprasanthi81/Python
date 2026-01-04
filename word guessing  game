@@ -1,0 +1,14 @@
+import random
+
+words = ["python", "github", "programming"]
+word = random.choice(words)
+guessed = ""
+
+while True:
+    char = input("Guess a letter: ")
+    if char in word:
+        guessed += char
+    print("Guessed letters:", guessed)
+    if set(guessed) == set(word):
+        print("You guessed the word:", word)
+        break
