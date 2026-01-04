@@ -1,0 +1,4 @@
+num = input("Enter 10-digit number: ")
+
+formatted = f"({num[:3]}) {num[3:6]}-{num[6:]}"
+print("Formatted:", formatted)
