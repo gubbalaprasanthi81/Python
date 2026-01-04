@@ -1,0 +1,10 @@
+import random
+
+quotes = [
+    "Practice makes perfect",
+    "Code is poetry",
+    "Never stop learning",
+    "Python is powerful"
+]
+
+print("Quote:", random.choice(quotes))
