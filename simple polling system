@@ -1,0 +1,10 @@
+votes = {"A": 0, "B": 0}
+
+while True:
+    vote = input("Vote A/B or exit: ").upper()
+    if vote == "EXIT":
+        break
+    if vote in votes:
+        votes[vote] += 1
+
+print("Results:", votes)
