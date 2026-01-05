@@ -1,0 +1,13 @@
+stack = []
+expr = input("Enter expression: ")
+
+for ch in expr:
+    if ch == '(':
+        stack.append(ch)
+    elif ch == ')':
+        if not stack:
+            print("Not Balanced")
+            break
+        stack.pop()
+else:
+    print("Balanced" if not stack else "Not Balanced")
