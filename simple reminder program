@@ -1,0 +1,7 @@
+import time
+
+msg = input("Reminder message: ")
+sec = int(input("Time in seconds: "))
+
+time.sleep(sec)
+print("Reminder:", msg)
