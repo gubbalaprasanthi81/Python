@@ -1,0 +1,8 @@
+num = int(input("Enter number: "))
+s = sum(int(d) for d in str(num))
+
+print("Harshad Number" if num % s == 0 else "Not Harshad")
+
+
+
+
