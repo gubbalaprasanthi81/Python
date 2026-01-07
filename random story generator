@@ -1,0 +1,9 @@
+import random
+
+characters = ["A programmer", "A student", "An engineer"]
+actions = ["builds an app", "learns Python", "creates a robot"]
+places = ["at college", "in a lab", "at home"]
+
+print(random.choice(characters),
+      random.choice(actions),
+      random.choice(places))
