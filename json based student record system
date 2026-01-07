@@ -1,0 +1,17 @@
+import json
+
+file = "students.json"
+
+def add_student(name, marks):
+    data = {}
+    try:
+        with open(file, "r") as f:
+            data = json.load(f)
+    except:
+        pass
+    data[name] = marks
+    with open(file, "w") as f:
+        json.dump(data, f, indent=4)
+
+add_student("Alice", 85)
+add_student("Bob", 9_
