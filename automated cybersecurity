@@ -1,0 +1,19 @@
+import requests
+
+def security_audit(url):
+    try:
+        response = requests.get(url, timeout=5)
+        server = response.headers.get('Server', 'Unknown')
+        status = response.status_code
+        
+        print(f"--- Audit Report for {url} ---")
+        print(f"Status: {'✅ Online' if status == 200 else '⚠️ Issue Detected'}")
+        print(f"Web Server Technology: {server}")
+        
+        if 'X-Frame-Options' not in response.headers:
+            print("Security Tip: Site is missing 'X-Frame-Options' (Clickjacking risk).")
+            
+    except Exception as e:
+        print(f"Error: Could not reach {url}. {e}")
+
+security_audit("https://www.python.org")
