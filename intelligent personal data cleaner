@@ -1,0 +1,22 @@
+import re
+import os
+
+def scan_for_secrets(directory):
+    # Regex patterns for API keys and Secret Tokens
+    patterns = {
+        "GitHub Token": r"ghp_[a-zA-Z0-9]{36}",
+        "Generic Secret": r"SECRET_KEY\s*=\s*['\"](.*?)['\"]",
+        "Email": r"[\w\.-]+@[\w\.-]+\.\w+"
+    }
+    
+    for root, _, files in os.walk(directory):
+        for file in files:
+            if file.endswith(".py") or file.endswith(".env"):
+                path = os.path.join(root, file)
+                with open(path, 'r', errors='ignore') as f:
+                    content = f.read()
+                    for label, pattern in patterns.items():
+                        if re.search(pattern, content):
+                            print(f"⚠️ Potential {label} found in: {path}")
+
+# Usage: scan_for_secrets("./my_project")
