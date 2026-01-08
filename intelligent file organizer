@@ -1,0 +1,23 @@
+import os
+from pathlib import Path
+
+def organize_downloads(folder_path):
+    # Map extensions to folder names
+    mapping = {
+        ".pdf": "Documents",
+        ".jpg": "Images",
+        ".png": "Images",
+        ".zip": "Archives",
+        ".py": "Code"
+    }
+    
+    path = Path(folder_path)
+    for file in path.iterdir():
+        if file.is_file():
+            dest_folder = mapping.get(file.suffix, "Others")
+            dest_path = path / dest_folder
+            dest_path.mkdir(exist_ok=True)
+            file.replace(dest_path / file.name)
+            print(f"Moved {file.name} to {dest_folder}")
+
+# To run: organize_downloads('/path/to/your/downloads')
