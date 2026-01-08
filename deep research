@@ -1,0 +1,22 @@
+import requests
+from bs4 import BeautifulSoup
+
+def deep_research_agent(query):
+    print(f"🔍 Starting research on: {query}")
+    # Search simulated via a news/info URL (in real use, use an API like Serper or DuckDuckGo)
+    search_url = f"https://www.google.com/search?q={query}"
+    headers = {"User-Agent": "Mozilla/5.0"}
+    
+    response = requests.get(search_url, headers=headers)
+    soup = BeautifulSoup(response.text, 'html.parser')
+    
+    # Extract headings as "findings"
+    findings = [h3.text for h3 in soup.find_all('h3')[:5]]
+    
+    print("\n📝 Research Summary:")
+    for i, fact in enumerate(findings, 1):
+        print(f"{i}. {fact}")
+
+# Example Usage
+if __name__ == "__main__":
+    deep_research_agent("Python trends in 2026")
