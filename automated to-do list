@@ -1,0 +1,21 @@
+def todo_app():
+    tasks = []
+    while True:
+        print("\n--- QUICK TODO ---")
+        print("1. Add Task  2. Show Tasks  3. Exit")
+        choice = input("Choose (1/2/3): ")
+
+        if choice == '1':
+            item = input("What do you need to do? ")
+            tasks.append(item)
+            print("Added!")
+        elif choice == '2':
+            print("\nYour List:")
+            for i, task in enumerate(tasks, 1):
+                print(f"{i}. {task}")
+        elif choice == '3':
+            break
+        else:
+            print("Invalid choice.")
+
+todo_app()
