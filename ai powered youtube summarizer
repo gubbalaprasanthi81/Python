@@ -1,0 +1,19 @@
+from youtube_transcript_api import YouTubeTranscriptApi
+
+def get_video_summary(video_id):
+    try:
+        # 1. Fetch the transcript
+        transcript = YouTubeTranscriptApi.get_transcript(video_id)
+        full_text = " ".join([entry['text'] for entry in transcript])
+        
+        # 2. Logic to send text to an LLM (Simulated here)
+        print(f"--- Summary for Video {video_id} ---")
+        summary = f"Summary of {len(full_text)} characters: \n"
+        summary += "- Main topic: Deep learning advancements.\n- Key takeaway: Python 3.14 speedups."
+        
+        return summary
+    except Exception as e:
+        return f"Error: {e}"
+
+# Example: summarize a video (ID from URL https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+# print(get_video_summary("dQw4w9WgXcQ"))
