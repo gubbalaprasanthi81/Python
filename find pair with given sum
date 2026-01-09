@@ -1,0 +1,9 @@
+nums = list(map(int, input("Enter numbers: ").split()))
+target = int(input("Target sum: "))
+
+pairs = set()
+for i in nums:
+    if target - i in nums:
+        pairs.add((i, target - i))
+
+print("Pairs:", pairs)
