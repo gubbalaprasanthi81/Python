@@ -1,0 +1,11 @@
+questions = {
+    "1 + 1?": "2",
+    "Capital of France?": "paris"
+}
+
+score = 0
+for q, a in questions.items():
+    if input(q + " ").lower() == a:
+        score += 1
+
+print("Final Score:", score)
