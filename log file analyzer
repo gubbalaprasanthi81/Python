@@ -1,0 +1,9 @@
+def analyze_log(file):
+    with open(file, "r") as f:
+        lines = f.readlines()
+
+    errors = [line for line in lines if "ERROR" in line]
+    print("Total lines:", len(lines))
+    print("Error lines:", len(errors))
+
+analyze_log("app.log")
