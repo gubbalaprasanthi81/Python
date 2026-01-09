@@ -1,0 +1,4 @@
+sentence = input("Enter sentence: ").lower().split()
+duplicates = set([w for w in sentence if sentence.count(w) > 1])
+
+print("Duplicate words:", duplicates)
