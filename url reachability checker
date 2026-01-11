@@ -1,0 +1,9 @@
+import socket
+
+url = input("Enter website (without https): ")
+
+try:
+    socket.gethostbyname(url)
+    print("Website is reachable")
+except:
+    print("Website not reachable")
