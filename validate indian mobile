@@ -1,0 +1,6 @@
+mobile = input("Enter mobile number: ")
+
+if mobile.isdigit() and len(mobile) == 10 and mobile[0] in "6789":
+    print("Valid Indian mobile number")
+else:
+    print("Invalid number")
