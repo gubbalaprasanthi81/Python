@@ -1,0 +1,5 @@
+import string
+
+text = input("Enter text: ")
+clean = text.translate(str.maketrans('', '', string.punctuation))
+print("Clean text:", clean)
