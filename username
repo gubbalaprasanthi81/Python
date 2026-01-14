@@ -1,0 +1,9 @@
+import random
+import string
+
+name = input("Enter name: ")
+digits = ''.join(random.choices(string.digits, k=3))
+password = ''.join(random.choices(string.ascii_letters + string.digits, k=8))
+
+print("Username:", name.lower() + digits)
+print("Password:", password)
