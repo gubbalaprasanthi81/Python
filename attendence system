@@ -1,0 +1,9 @@
+attendance = {}
+
+while True:
+    name = input("Enter name (exit to stop): ")
+    if name.lower() == "exit":
+        break
+    attendance[name] = attendance.get(name, 0) + 1
+
+print("Attendance Record:", attendance)
