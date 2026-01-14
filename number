@@ -1,0 +1,5 @@
+isbn = input("Enter ISBN-10: ")
+total = sum((10 - i) * int(isbn[i]) for i in range(9))
+
+check = 11 - (total % 11)
+print("Valid ISBN" if str(check) == isbn[-1] else "Invalid ISBN")
