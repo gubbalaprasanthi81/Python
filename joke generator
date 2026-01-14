@@ -1,0 +1,9 @@
+import random
+
+jokes = [
+    "Why do programmers hate nature? Too many bugs.",
+    "Why Python? Because snakes were taken.",
+    "Debugging is like being a detective."
+]
+
+print(random.choice(jokes))
