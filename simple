@@ -1,0 +1,2 @@
+url = input("Enter website name: ")
+print("https://www." + url + ".com")
