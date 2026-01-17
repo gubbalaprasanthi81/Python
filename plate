@@ -1,0 +1,13 @@
+import random
+import string
+
+plate = (
+    random.choice(string.ascii_uppercase) +
+    random.choice(string.ascii_uppercase) +
+    str(random.randint(10, 99)) +
+    random.choice(string.ascii_uppercase) +
+    random.choice(string.ascii_uppercase) +
+    str(random.randint(1000, 9999))
+)
+
+print("License Plate:", plate)
