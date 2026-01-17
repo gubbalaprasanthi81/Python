@@ -1,0 +1,3 @@
+sentence = input("Enter sentence: ")
+clean = " ".join(sentence.split())
+print("Clean sentence:", clean)
