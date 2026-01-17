@@ -1,0 +1,6 @@
+import random
+
+names = ["john", "alex", "sam", "mike"]
+domains = ["gmail.com", "yahoo.com", "outlook.com"]
+
+print(random.choice(names) + str(random.randint(10,99)) + "@" + random.choice(domains))
