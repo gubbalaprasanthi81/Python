@@ -1,0 +1,5 @@
+num = int(input("Enter number: "))
+square = num * num
+total = sum(int(d) for d in str(square))
+
+print("Neon Number" if total == num else "Not Neon")
