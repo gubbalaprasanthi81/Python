@@ -1,0 +1,7 @@
+import random
+
+files = ["file1.txt", "file2.txt", "file3.txt"]
+file = random.choice(files)
+
+with open(file, "r") as f:
+    print(f.read())
