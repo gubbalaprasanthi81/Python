@@ -1,0 +1,4 @@
+num = int(input("Enter number: "))
+square = num * num
+
+print("Automorphic" if str(square).endswith(str(num)) else "Not Automorphic")
