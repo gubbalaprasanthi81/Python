@@ -1,0 +1,5 @@
+import time
+
+sec = int(input("Enter seconds: "))
+time.sleep(sec)
+print("Time's up!")
