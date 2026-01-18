@@ -1,0 +1,4 @@
+a = set(map(int, input("Set 1: ").split()))
+b = set(map(int, input("Set 2: ").split()))
+
+print("Intersection:", a & b)
