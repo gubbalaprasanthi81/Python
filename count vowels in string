@@ -1,0 +1,2 @@
+s = input("Enter string: ").lower()
+print(sum(1 for c in s if c in "aeiou"))
