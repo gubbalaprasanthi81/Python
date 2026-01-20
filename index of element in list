@@ -1,0 +1,4 @@
+lst = input("Enter elements: ").split()
+key = input("Search element: ")
+
+print("Index:", lst.index(key) if key in lst else "Not found")
