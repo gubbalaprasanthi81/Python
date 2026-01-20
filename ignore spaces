@@ -1,0 +1,4 @@
+text = input("Enter text: ").lower()
+clean = "".join(ch for ch in text if ch.isalnum())
+
+print("Palindrome" if clean == clean[::-1] else "Not Palindrome")
