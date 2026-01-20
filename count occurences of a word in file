@@ -1,0 +1,6 @@
+word = input("Enter word: ")
+
+with open("data.txt", "r") as f:
+    text = f.read().lower()
+
+print("Occurrences:", text.count(word.lower()))
