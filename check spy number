@@ -1,0 +1,8 @@
+num = int(input("Enter number: "))
+sum_d = prod = 1
+
+for d in str(num):
+    sum_d += int(d)
+    prod *= int(d)
+
+print("Spy Number" if sum_d == prod else "Not Spy")
