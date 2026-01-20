@@ -1,0 +1,4 @@
+with open("data.txt", "r") as f:
+    words = f.read().split()
+
+print("Largest word:", max(words, key=len))
