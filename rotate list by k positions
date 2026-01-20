@@ -1,0 +1,6 @@
+lst = list(map(int, input("Enter list: ").split()))
+k = int(input("Enter rotation value: "))
+
+k = k % len(lst)
+rotated = lst[k:] + lst[:k]
+print("Rotated list:", rotated)
