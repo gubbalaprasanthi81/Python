@@ -1,0 +1,14 @@
+import random
+
+quotes = [
+    "Code every day",
+    "Learning never stops",
+    "Practice makes progress"
+]
+
+quote = random.choice(quotes)
+
+with open("quote.txt", "w") as f:
+    f.write(quote)
+
+print("Saved quote:", quote)
