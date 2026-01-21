@@ -1,0 +1,4 @@
+import random
+
+names = ["coder", "python", "dev", "tech"]
+print(random.choice(names) + "_" + str(random.randint(1000, 9999)))
