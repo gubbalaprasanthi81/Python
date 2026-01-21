@@ -1,0 +1,5 @@
+sentence = input("Enter sentence: ").split()
+
+for word in sentence:
+    if word[0].lower() in "aeiou":
+        print(word)
