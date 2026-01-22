@@ -1,0 +1,20 @@
+while True:
+    print("\n1.Add Note  2.View Notes  3.Exit")
+    ch = int(input("Choice: "))
+
+    if ch == 1:
+        note = input("Write note: ")
+        with open("notes.txt", "a") as f:
+            f.write(note + "\n")
+        print("Note saved!")
+
+    elif ch == 2:
+        try:
+            with open("notes.txt", "r") as f:
+                print("\n--- Notes ---")
+                print(f.read())
+        except:
+            print("No notes found!")
+
+    else:
+        break
