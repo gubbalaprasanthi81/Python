@@ -1,0 +1,7 @@
+sentence = input("Enter sentence: ").lower()
+letter = input("Enter letter: ").lower()
+
+words = sentence.split()
+count = sum(1 for w in words if w.startswith(letter))
+
+print("Count:", count)
