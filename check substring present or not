@@ -1,0 +1,4 @@
+text = input("Enter main string: ")
+sub = input("Enter substring: ")
+
+print("Found" if sub in text else "Not Found")
