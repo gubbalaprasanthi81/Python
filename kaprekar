@@ -1,0 +1,12 @@
+num = int(input("Enter number: "))
+sq = num * num
+s = str(sq)
+
+for i in range(1, len(s)):
+    left = int(s[:i])
+    right = int(s[i:])
+    if right != 0 and left + right == num:
+        print("Kaprekar Number")
+        break
+else:
+    print("Not Kaprekar")
