@@ -1,0 +1,8 @@
+nums = list(map(int, input("Enter numbers: ").split()))
+nums = set(nums)
+
+smallest = 1
+while smallest in nums:
+    smallest += 1
+
+print("Smallest missing positive:", smallest)
