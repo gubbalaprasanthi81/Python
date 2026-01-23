@@ -1,0 +1,7 @@
+n = int(input("Enter N: "))
+
+with open("data.txt", "r") as f:
+    lines = f.readlines()
+
+print("Last lines:")
+print("".join(lines[-n:]))
