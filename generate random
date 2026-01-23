@@ -1,0 +1,2 @@
+import random
+print("PIN:", random.randint(1000, 9999))
