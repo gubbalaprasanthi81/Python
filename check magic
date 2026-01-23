@@ -1,0 +1,6 @@
+num = int(input("Enter number: "))
+
+while num > 9:
+    num = sum(int(d) for d in str(num))
+
+print("Magic Number" if num == 1 else "Not Magic")
