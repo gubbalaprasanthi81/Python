@@ -1,0 +1,6 @@
+import random
+
+with open("items.txt", "r") as f:
+    items = f.read().splitlines()
+
+print("Random choice:", random.choice(items))
