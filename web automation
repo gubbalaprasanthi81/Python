@@ -1,0 +1,17 @@
+import os
+import platform
+import time
+
+def check_status(host):
+    # Determine the command based on OS
+    param = '-n' if platform.system().lower() == 'windows' else '-c'
+    command = f"ping {param} 1 {host}"
+    
+    return os.system(command) == 0
+
+sites = ["google.com", "github.com", "stackoverflow.com", "this-site-should-fail.xyz"]
+
+print("--- Network Status Monitor ---")
+for site in sites:
+    status = "ONLINE" if check_status(site) else "OFFLINE"
+    print(f"{site}: {status}")
