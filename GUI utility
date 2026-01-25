@@ -1,0 +1,33 @@
+import tkinter as tk
+from tkinter import messagebox
+import csv
+from datetime import datetime
+
+def save_expense():
+    item = item_entry.get()
+    amount = amount_entry.get()
+    if item and amount:
+        with open('expenses.csv', 'a', newline='') as f:
+            writer = csv.writer(f)
+            writer.writerow([datetime.now().strftime("%Y-%m-%d"), item, amount])
+        messagebox.showinfo("Success", "Expense saved!")
+        item_entry.delete(0, tk.END)
+        amount_entry.delete(0, tk.END)
+    else:
+        messagebox.showwarning("Input Error", "Please fill all fields")
+
+root = tk.Tk()
+root.title("Simple Expense Tracker")
+root.geometry("300x200")
+
+tk.Label(root, text="Item Name:").pack(pady=5)
+item_entry = tk.Entry(root)
+item_entry.pack()
+
+tk.Label(root, text="Amount ($):").pack(pady=5)
+amount_entry = tk.Entry(root)
+amount_entry.pack()
+
+tk.Button(root, text="Add Expense", command=save_expense).pack(pady=20)
+
+root.mainloop()
