@@ -1,0 +1,26 @@
+import os
+import shutil
+
+def organize_folder(path):
+    # Extension mapping
+    extensions = {
+        'Images': ['.jpg', '.jpeg', '.png', '.gif'],
+        'Documents': ['.pdf', '.docx', '.txt', '.xlsx'],
+        'Videos': ['.mp4', '.mkv', '.mov'],
+        'Archives': ['.zip', '.tar', '.rar']
+    }
+
+    for filename in os.listdir(path):
+        name, ext = os.path.splitext(filename)
+        for folder, ext_list in extensions.items():
+            if ext.lower() in ext_list:
+                folder_path = os.path.join(path, folder)
+                # Create folder if it doesn't exist
+                if not os.path.exists(folder_path):
+                    os.makedirs(folder_path)
+                # Move file
+                shutil.move(os.path.join(path, filename), os.path.join(folder_path, filename))
+                print(f"Moved: {filename} -> {folder}")
+
+# Set the path to the folder you want to clean
+# organize_folder('/Users/YourName/Downloads')
