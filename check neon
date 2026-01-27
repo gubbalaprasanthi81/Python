@@ -1,0 +1,7 @@
+num = int(input("Enter number: "))
+sq = num * num
+
+if sum(int(d) for d in str(sq)) == num:
+    print("Neon Number")
+else:
+    print("Not Neon Number")
