@@ -1,0 +1,5 @@
+import string
+
+text = input("Enter text: ")
+result = ''.join(ch for ch in text if ch not in string.punctuation)
+print(result)
