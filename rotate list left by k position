@@ -1,0 +1,6 @@
+nums = list(map(int, input("Enter numbers: ").split()))
+k = int(input("Rotate by: "))
+
+k %= len(nums)
+rotated = nums[k:] + nums[:k]
+print(rotated)
