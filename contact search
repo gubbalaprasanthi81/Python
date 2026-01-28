@@ -1,0 +1,4 @@
+contacts = {"Ravi": "9876543210", "Sita": "9123456780"}
+
+name = input("Enter name: ")
+print(contacts.get(name, "Contact not found"))
