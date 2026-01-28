@@ -1,0 +1,14 @@
+text = input("Enter text: ")
+
+d = l = s = 0
+for ch in text:
+    if ch.isdigit():
+        d += 1
+    elif ch.isalpha():
+        l += 1
+    else:
+        s += 1
+
+print("Letters:", l)
+print("Digits:", d)
+print("Special characters:", s)
