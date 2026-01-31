@@ -1,0 +1,4 @@
+sentence = input("Enter sentence: ").lower()
+alphabet = set("abcdefghijklmnopqrstuvwxyz")
+
+print("Pangram" if alphabet <= set(sentence) else "Not Pangram")
