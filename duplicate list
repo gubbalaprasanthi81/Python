@@ -1,0 +1,8 @@
+data = [{"a":1}, {"b":2}, {"a":1}]
+unique = []
+
+for d in data:
+    if d not in unique:
+        unique.append(d)
+
+print(unique)
