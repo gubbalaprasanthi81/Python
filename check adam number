@@ -1,0 +1,7 @@
+num = int(input("Enter number: "))
+
+rev = int(str(num)[::-1])
+if num * num == int(str(rev * rev)[::-1]):
+    print("Adam Number")
+else:
+    print("Not Adam Number")
