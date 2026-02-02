@@ -1,0 +1,11 @@
+matrix = [
+    [0, 0, 3],
+    [0, 0, 0],
+    [1, 0, 0]
+]
+
+zeros = sum(row.count(0) for row in matrix)
+total = len(matrix) * len(matrix[0])
+
+print("Sparse Matrix" if zeros > total//2 else "Not Sparse")
+
