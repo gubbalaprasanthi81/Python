@@ -1,0 +1,4 @@
+sentence = input("Enter sentence: ").split()
+count = sum(1 for w in sentence if w == w[::-1])
+
+print("Palindrome words count:", count)
