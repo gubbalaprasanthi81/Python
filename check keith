@@ -1,0 +1,14 @@
+num = input("Enter number: ")
+digits = list(map(int, num))
+n = len(digits)
+temp = digits.copy()
+
+while True:
+    s = sum(temp[-n:])
+    if s == int(num):
+        print("Keith Number")
+        break
+    if s > int(num):
+        print("Not Keith Number")
+        break
+    temp.append(s)
