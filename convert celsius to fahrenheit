@@ -1,0 +1,4 @@
+celsius = list(map(float, input("Enter temperatures: ").split()))
+fahrenheit = [(c * 9/5) + 32 for c in celsius]
+print(fahrenheit)
+
