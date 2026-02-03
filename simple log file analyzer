@@ -1,0 +1,5 @@
+with open("log.txt") as f:
+    lines = f.readlines()
+
+errors = [l for l in lines if "ERROR" in l]
+print("Error count:", len(errors))
