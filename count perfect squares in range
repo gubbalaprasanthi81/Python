@@ -1,0 +1,8 @@
+import math
+
+start = int(input("Start: "))
+end = int(input("End: "))
+
+count = sum(1 for i in range(int(math.sqrt(start)), int(math.sqrt(end))+1) if i*i >= start and i*i <= end)
+print("Perfect squares:", count)
+
