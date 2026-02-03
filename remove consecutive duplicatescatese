@@ -1,0 +1,8 @@
+text = input("Enter string: ")
+result = text[0]
+
+for ch in text[1:]:
+    if ch != result[-1]:https://github.com/gubbalaprasanthi81/Python/tree/main
+        result += ch
+
+print(result)
