@@ -1,0 +1,7 @@
+data = {"a": 1, "b": 2, "c": 1}
+rev = {}
+
+for k, v in data.items():
+    rev.setdefault(v, []).append(k)
+
+print(rev)
