@@ -1,0 +1,4 @@
+nums = list(map(int, input("Enter numbers: ").split()))
+d = nums[1] - nums[0]
+
+print("AP" if all(nums[i+1] - nums[i] == d for i in range(len(nums)-1)) else "Not AP")
