@@ -1,0 +1,9 @@
+score = 0
+
+q = {"2+2": "4", "3*3": "9"}
+
+for ques, ans in q.items():
+    if input(ques + " = ") == ans:
+        score += 1
+
+print("Score:", score)
