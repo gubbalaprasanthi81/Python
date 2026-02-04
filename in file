@@ -1,0 +1,9 @@
+with open("sample.txt") as f:
+    lines = f.readlines()
+
+words = sum(len(line.split()) for line in lines)
+chars = sum(len(line) for line in lines)
+
+print("Lines:", len(lines))
+print("Words:", words)
+print("Characters:", chars)
