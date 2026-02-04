@@ -1,0 +1,7 @@
+num = input("Enter number: ")
+total = 0
+
+for i, d in enumerate(num, start=1):
+    total += int(d) ** i
+
+print("Disarium Number" if total == int(num) else "Not Disarium")
