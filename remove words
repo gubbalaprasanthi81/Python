@@ -1,0 +1,5 @@
+sentence = input("Enter sentence: ").split()
+n = int(input("Enter minimum length: "))
+
+result = [w for w in sentence if len(w) >= n]
+print(result)
