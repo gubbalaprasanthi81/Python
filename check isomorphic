@@ -1,0 +1,13 @@
+s1 = input("Enter first string: ")
+s2 = input("Enter second string: ")
+
+mapping = {}
+flag = True
+
+for a, b in zip(s1, s2):
+    if a in mapping and mapping[a] != b:
+        flag = False
+        break
+    mapping[a] = b
+
+print("Isomorphic" if flag else "Not Isomorphic")
