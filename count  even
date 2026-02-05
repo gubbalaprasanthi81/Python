@@ -1,0 +1,6 @@
+nums = list(map(int, input("Enter numbers: ").split()))
+even = sum(1 for x in nums if x % 2 == 0)
+odd = len(nums) - even
+
+print("Even:", even)
+print("Odd:", odd)
