@@ -1,0 +1,12 @@
+time = input("Enter time (HH:MM AM/PM): ")
+
+h, rest = time.split(":")
+m, period = rest.split()
+
+h = int(h)
+if period.upper() == "PM" and h != 12:
+    h += 12
+if period.upper() == "AM" and h == 12:
+    h = 0
+
+print(f"{h:02}:{m}")
