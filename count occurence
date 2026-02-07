@@ -1,0 +1,7 @@
+num = input("Enter number: ")
+freq = {}
+
+for d in num:
+    freq[d] = freq.get(d, 0) + 1
+
+print(freq)
