@@ -1,0 +1,11 @@
+import math
+
+num = int(input("Enter number: "))
+temp = num
+total = 0
+
+while temp > 0:
+    total += math.factorial(temp % 10)
+    temp //= 10
+
+print("Krishnamurthy Number" if total == num else "Not Krishnamurthy")
