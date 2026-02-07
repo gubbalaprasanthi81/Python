@@ -1,0 +1,9 @@
+words = input("Enter words: ").split()
+pairs = []
+
+for i in range(len(words)):
+    for j in range(i+1, len(words)):
+        if sorted(words[i]) == sorted(words[j]):
+            pairs.append((words[i], words[j]))
+
+print("Anagram pairs:", pairs)
