@@ -1,0 +1,7 @@
+text = input("Enter string: ")
+result = ""
+
+for word in text.split():
+    result += word[0].upper() + word[1:].lower() + " "
+
+print(result.strip())
