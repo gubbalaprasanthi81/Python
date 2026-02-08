@@ -1,0 +1,10 @@
+nums = list(map(int, input("Enter numbers: ").split()))
+candidate = None
+count = 0
+
+for n in nums:
+    if count == 0:
+        candidate = n
+    count += 1 if n == candidate else -1
+
+print("Majority element:", candidate)
