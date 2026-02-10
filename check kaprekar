@@ -1,0 +1,10 @@
+num = input("Enter 4-digit number: ")
+
+count = 0
+while num != "6174":
+    asc = "".join(sorted(num))
+    desc = "".join(sorted(num, reverse=True))
+    num = str(int(desc) - int(asc)).zfill(4)
+    count += 1
+
+print("Reached 6174 in", count, "steps")
