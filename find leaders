@@ -1,0 +1,10 @@
+nums = list(map(int, input("Enter numbers: ").split()))
+leaders = []
+max_right = -1
+
+for n in reversed(nums):
+    if n > max_right:
+        leaders.append(n)
+        max_right = n
+
+print("Leaders:", leaders[::-1])
