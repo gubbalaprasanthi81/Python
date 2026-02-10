@@ -1,0 +1,7 @@
+num = int(input("Enter number: "))
+
+for p in [2, 3, 5]:
+    while num % p == 0:
+        num //= p
+
+print("Ugly Number" if num == 1 else "Not Ugly")
