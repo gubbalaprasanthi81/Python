@@ -1,0 +1,3 @@
+text = input("Enter string: ")
+max_char = max(set(text), key=text.count)
+print("Maximum repeating character:", max_char)
