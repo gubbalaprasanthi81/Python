@@ -1,0 +1,3 @@
+text = input("Enter string: ")
+result = {ch: text.count(ch) for ch in set(text)}
+print(result)
