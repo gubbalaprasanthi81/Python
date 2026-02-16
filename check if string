@@ -1,0 +1,2 @@
+text = input("Enter string: ")
+print("Only digits" if text.isdigit() else "Contains non-digit characters")
