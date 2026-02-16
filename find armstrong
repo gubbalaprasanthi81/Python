@@ -1,0 +1,7 @@
+start = int(input("Start: "))
+end = int(input("End: "))
+
+for num in range(start, end+1):
+    power = len(str(num))
+    if num == sum(int(d)**power for d in str(num)):
+        print(num)
