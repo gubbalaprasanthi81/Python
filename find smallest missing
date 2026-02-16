@@ -1,0 +1,9 @@
+nums = list(map(int, input("Enter numbers: ").split()))
+nums = set(nums)
+
+i = 1
+while True:
+    if i not in nums:
+        print("Smallest missing positive:", i)
+        break
+    i += 1
