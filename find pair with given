@@ -1,0 +1,11 @@
+nums = list(map(int, input("Enter numbers: ").split()))
+target = int(input("Enter target sum: "))
+
+seen = set()
+for n in nums:
+    if target - n in seen:
+        print("Pair found:", n, target-n)
+        break
+    seen.add(n)
+else:
+    print("No pair found")
