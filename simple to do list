@@ -1,0 +1,11 @@
+tasks = []
+
+while True:
+    task = input("Add task (or type 'exit'): ")
+    if task.lower() == "exit":
+        break
+    tasks.append(task)
+
+print("Your Tasks:")
+for i, t in enumerate(tasks, 1):
+    print(i, t)
