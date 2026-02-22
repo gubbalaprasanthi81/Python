@@ -1,0 +1,12 @@
+matrix = [[1,0,0],[0,1,0],[0,0,1]]
+
+n = len(matrix)
+flag = True
+
+for i in range(n):
+    for j in range(n):
+        if (i == j and matrix[i][j] != 1) or \
+           (i != j and matrix[i][j] != 0):
+            flag = False
+
+print("Identity Matrix" if flag else "Not Identity Matrix")
