@@ -1,0 +1,5 @@
+a = set(map(int, input("List 1: ").split()))
+b = set(map(int, input("List 2: ").split()))
+c = set(map(int, input("List 3: ").split()))
+
+print("Common elements:", list(a & b & c))
