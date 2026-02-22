@@ -1,0 +1,11 @@
+num = int(input("Enter number: "))
+sq = num * num 
+temp = num
+while temp > 0:
+    if temp % 10 != sq % 10:
+        print("Not Automorphic")
+        break
+    temp //= 10
+    sq //= 10
+else:
+    print("Automorphic Number")
