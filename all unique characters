@@ -1,0 +1,6 @@
+text = input("Enter string: ")
+
+if len(text) == len(set(text)):
+    print("All characters unique")
+else:
+    print("Duplicates found")
