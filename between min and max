@@ -1,0 +1,8 @@
+nums = list(map(int, input("Enter numbers: ").split()))
+missing = []
+
+for i in range(min(nums), max(nums)):
+    if i not in nums:
+        missing.append(i)
+
+print("Missing numbers:", missing)
