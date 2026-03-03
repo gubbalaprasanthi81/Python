@@ -1,0 +1,10 @@
+num = int(input("Enter number: "))
+factor = 2
+
+while factor * factor <= num:
+    if num % factor:
+        factor += 1
+    else:
+        num //= factor
+
+print("Largest prime factor:", num)
