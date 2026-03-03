@@ -1,0 +1,4 @@
+num = int(input("Enter number: "))
+binary = format(num, "b")
+
+print("Binary Palindrome" if binary == binary[::-1] else "Not Binary Palindrome")
