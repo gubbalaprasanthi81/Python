@@ -1,0 +1,6 @@
+import random
+
+nums = list(map(int, input("Enter numbers: ").split()))
+random.shuffle(nums)
+
+print("Shuffled list:", nums)
