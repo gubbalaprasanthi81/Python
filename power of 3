@@ -1,0 +1,9 @@
+num = int(input("Enter number: "))
+
+while num > 1:
+    if num % 3 != 0:
+        print("Not power of 3")
+        break
+    num //= 3
+else:
+    print("Power of 3")
