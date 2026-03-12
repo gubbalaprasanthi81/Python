@@ -1,0 +1,13 @@
+a = list(map(int, input("Array 1: ").split()))
+b = list(map(int, input("Array 2: ").split()))
+
+merged = sorted(a + b)
+
+n = len(merged)
+
+if n % 2 == 0:
+    median = (merged[n//2 - 1] + merged[n//2]) / 2
+else:
+    median = merged[n//2]
+
+print("Median:", median)
