@@ -1,0 +1,11 @@
+nums = list(map(int, input("Enter numbers: ").split()))
+diff = int(input("Enter difference: "))
+
+nums_set = set(nums)
+
+for n in nums:
+    if n + diff in nums_set:
+        print("Pair:", n, n + diff)
+        break
+else:
+    print("No pair found")
