@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class TypingSpeed {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        String sentence = "Java is a powerful programming language";
+
+        System.out.println(sentence);
+        System.out.println("\nStart typing:");
+
+        long start = System.currentTimeMillis();
+
+        String input = sc.nextLine();
+
+        long end = System.currentTimeMillis();
+
+        long time = (end - start) / 1000;
+
+        System.out.println("Time Taken: " + time + " seconds");
+    }
+}
