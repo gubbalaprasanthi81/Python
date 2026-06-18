@@ -1,0 +1,43 @@
+import java.util.*;
+
+public class AttendanceSystem {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        HashMap<String, String> attendance = new HashMap<>();
+
+        while(true) {
+
+            System.out.println("\n1.Mark Attendance");
+            System.out.println("2.View Attendance");
+            System.out.println("3.Exit");
+
+            int ch = sc.nextInt();
+            sc.nextLine();
+
+            switch(ch) {
+
+                case 1:
+                    System.out.print("Student Name: ");
+                    String name = sc.nextLine();
+
+                    System.out.print("Present/Absent: ");
+                    String status = sc.nextLine();
+
+                    attendance.put(name, status);
+                    break;
+
+                case 2:
+                    for(String key : attendance.keySet()) {
+                        System.out.println(key + " : " + attendance.get(key));
+                    }
+                    break;
+
+                case 3:
+                    System.exit(0);
+            }
+        }
+    }
+}
