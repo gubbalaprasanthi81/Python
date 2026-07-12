@@ -1,0 +1,6 @@
+from time import strftime
+import time
+
+while True:
+    print(strftime("%H:%M:%S"), end="\r")
+    time.sleep(1)
