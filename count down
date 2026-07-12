@@ -1,0 +1,9 @@
+num = int(input("Enter Starting Number: "))
+
+while num >= 0:
+    print(num)
+    num -= 1num = int(input("Enter Starting Number: "))
+
+while num >= 0:
+    print(num)
+    num -= 1
